@@ -6,22 +6,24 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="qrcode.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css" />
   </head>
   <body>
     <h1>Free Qr code generator</h1>
-    <h2>Created by <a href="https://www.zumat.ch" target="_blank">zumat</a></h2>
-    <input id="text" type="text" value="http://www.google.com" style="width:80%" /><br /><br />
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <h3>Created by <a href="https://www.zumat.ch" target="_blank">zumat</a></h3>
+    <input id="text" type="text" value="https://thispersondoesnotexist.com/" /><br />
+    <div id="qrcode"></div>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg-qr">
      <g id="qrcode"/>
     </svg>
     <footer>
-        <p>Created thanks to the <a href="https://github.com/davidshimjs">davidshimjs'</a> library <a href="https://github.com/davidshimjs/qrcodejs">qrcodejs</a> - MIT Licence</p>
+        <p>Created thanks to the <a href="https://github.com/davidshimjs">davidshimjs'</a> library <a href="https://github.com/davidshimjs/qrcodejs">qrcodejs</a></p>
     </footer>
     <script type="text/javascript">
   var qrcode = new QRCode(document.getElementById("qrcode"), {
-      width : 200,
-      height : 200,
-      useSVG: true
+      width : 2000,
+      height : 2000,
+      /*useSVG: true*/
   });
 
   function makeCode () {		
