@@ -539,7 +539,7 @@ var QRCode;
 			height : 256,
 			typeNumber : 4,
 			colorDark : "#000000",
-			colorLight : "#ffffff",
+			colorLight : "#fffada",
 			correctLevel : QRErrorCorrectLevel.H
 		};
 		
