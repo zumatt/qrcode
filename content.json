@@ -1,1 +1,14 @@
-{}
+{
+  "custom-field": "This is a random description",
+  "custom-object": {
+    "custom-line": "Heyjo"
+  },
+  "custom-list": [
+    {
+      "custom-list-item": "Arturo"
+    },
+    {
+      "custom-list-item": "Gianni"
+    }
+  ]
+}
