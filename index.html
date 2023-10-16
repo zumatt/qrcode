@@ -9,36 +9,26 @@
     <link rel="stylesheet" type="text/css" href="main.css" />
   </head>
   <body>
-    <header>
-      <h1>Free Qr code generator</h1>
-      <p id="subtitle">Why you need to pay for something so easy?</p>
-    </header>
-    <input id="text" type="text" value="https://thispersondoesnotexist.com/" style="margin-top: 5em;"/><br />
-    <!--<input id="colorDark" type="colorDark" value="#000000" style="margin-top: 1em;"/><br />
-    <input id="colorLight" type="colorLight" value="#ffffff" style="margin-top: 1em;"/><br />-->
+    <h1>Free Qr code generator</h1>
+    <h3>Created by <a href="https://www.zumat.ch" target="_blank">zumat</a></h3>
+    <input id="text" type="text" value="https://thispersondoesnotexist.com/" /><br />
     <div id="qrcode"></div>
-    <p style="margin-top: 5em; text-align: center;">Press enter to refresh. <br />Right click on the image to save it!</p>
+    <p style="margin-top: 2em;">Right click on the image to save it!</p>
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg-qr">
      <g id="qrcode"/>
     </svg>
     <footer>
-        <p>Created by <a href="https://www.zumat.ch" target="_blank">zumat</a> thanks to the library <a href="https://github.com/davidshimjs/qrcodejs">qrcodejs</a></p>
+        <p>Created thanks to the <a href="https://github.com/davidshimjs">davidshimjs'</a> library <a href="https://github.com/davidshimjs/qrcodejs">qrcodejs</a></p>
     </footer>
     <script type="text/javascript">
-      darkColor = "#000000";
-      lightColor = "#ffffff";
   var qrcode = new QRCode(document.getElementById("qrcode"), {
       width : 2000,
       height : 2000,
-      colorDark : darkColor,
-			colorLight : lightColor,
       /*useSVG: true*/
   });
 
   function makeCode () {		
       var elText = document.getElementById("text");
-      var darkColor = document.getElementById("colorDark");
-      var lightColor = document.getElementById("colorlight");
 
       if (!elText.value) {
           alert("Input a text");
@@ -52,17 +42,6 @@
   makeCode();
 
   $("#text").
-      on("blur", function () {
-          makeCode();
-      }).
-      on("keydown", function (e) {
-          if (e.keyCode == 13) {
-              console.log("QR Refreshed!");
-              makeCode();
-          }
-      });
-  
-  $("#colorDark").
       on("blur", function () {
           makeCode();
       }).
