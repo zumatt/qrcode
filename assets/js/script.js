@@ -70,7 +70,6 @@ elText.addEventListener('input', updateQRCode);
 var svg = document.getElementById("svgQr");
 
 downloadLink.addEventListener("click", function() {
-    console.log(svg);
     var svgData = new XMLSerializer().serializeToString(svg);
     var blob = new Blob([svgData], { type: "image/svg+xml" });
     var url = URL.createObjectURL(blob);
