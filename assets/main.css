@@ -1,0 +1,145 @@
+/* -------------------> FONT <------------------- */
+@font-face {
+    font-family: EditorialNew;
+    src: url("font/EditorialNewRegular.otf") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: EditorialNew-Italic;
+    src: url("font/EditorialNewItalic.otf") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: SuisseIntl;
+    src: url("font/SuisseIntlRegular.otf") format("opentype");
+    font-display: swap;
+}
+
+/* -------------------> STYLE <------------------- */
+body{
+    font-family: "SuisseIntl";
+    text-align: center;
+    margin: 0;
+}
+
+#svg-qr {
+    padding-top: 3em;
+    width: 80%;
+    margin: auto;
+    display: block;
+  }
+
+img{
+    width: 30vw;
+    display: block;
+    margin: auto;
+}
+
+#text {
+    width: 100%;
+    height: calc(80vh - 2px);
+    text-align: center;
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 1px solid black;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    width:100%;
+    height: 10vh;
+    border-top: 1px solid black;
+    align-items: center;
+}
+
+a{
+    color: black;
+}
+a:hover{
+    background-color: rgb(148, 147, 223);
+    padding: 2px;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+}
+
+.container p{
+    font-family: "EditorialNew";
+}
+
+.input,
+.qrcode {
+    width: 50%;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    border-bottom: 1px solid black;
+    font-family: "EditorialNew-Italic";
+}
+
+footer p{
+    width: 50%;
+    margin: 0;
+}
+
+#svgQr{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img{
+        width: 50vw;
+    }
+
+    .input,
+    .qrcode {
+      width: 100%; /* Full width on mobile */
+    }
+
+    .input{
+      height: 20%
+    }
+
+    .qrcode{
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Center vertically */
+      align-items: center; /* Center horizontally */
+    }
+
+    #text {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        border-left: 0;
+        border-bottom: 1px solid black;
+        border-right: 0;
+        border-top: 1px solid black;
+    }
+
+    footer{
+        flex-direction: column;
+        font-size: 12px;
+    }
+    
+}
