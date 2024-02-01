@@ -71,7 +71,8 @@ var svg = document.getElementById("svgQr");
 
 downloadLink.addEventListener("click", function() {
     var svgData = new XMLSerializer().serializeToString(svg);
-    var blob = new Blob([svgData], { type: "image/svg+xml" });
+    var cleanedSvgData = svgData.replace('<div xmlns="http://www.w3.org/1999/xhtml" id="svgQr">', '').replace('</div>', '').replace('<rect x="0" y="0" width="256" height="256" fill="rgba(0, 0, 0, 0)"/>', '');
+    var blob = new Blob([cleanedSvgData], { type: "image/svg+xml" });
     var url = URL.createObjectURL(blob);
 
     downloadLink.href = url;
